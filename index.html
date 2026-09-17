@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk DEOO ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  min-height:100vh;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  background:radial-gradient(circle at 50% 40%,#6d1830,#3b0718 45%,#17020a);
+  color:white;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle,rgba(255,80,130,.12),transparent 60%);
+  animation:glow 3s infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes glow{
+  from{opacity:.4}
+  to{opacity:1}
+}
+
+.web{
+  position:fixed;
+  width:150px;
+  height:150px;
+  opacity:.25;
+  pointer-events:none;
+}
+
+.web::before,
+.web::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:2px solid #ffb5c9;
+  border-radius:50%;
+}
+
+.web::after{
+  transform:scale(.65);
+}
+
+.web1{
+  top:-60px;
+  left:-60px;
+}
+
+.web2{
+  bottom:-60px;
+  right:-60px;
+  transform:rotate(180deg);
+}
+
+.float{
+  position:fixed;
+  font-size:22px;
+  animation:floatUp linear infinite;
+  opacity:.7;
+  pointer-events:none;
+}
+
+.f1{left:8%;bottom:-40px;animation-duration:7s}
+.f2{left:25%;bottom:-40px;animation-duration:9s;animation-delay:2s}
+.f3{left:48%;bottom:-40px;animation-duration:8s;animation-delay:1s}
+.f4{left:70%;bottom:-40px;animation-duration:10s;animation-delay:3s}
+.f5{left:88%;bottom:-40px;animation-duration:7s;animation-delay:1s}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) rotate(0);
+    opacity:0;
+  }
+  15%{opacity:.8}
+  100%{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  text-align:center;
+  opacity:0;
+  pointer-events:none;
+  transform:scale(.92) translateY(20px);
+  transition:.6s ease;
+}
+
+.slide.active{
+  opacity:1;
+  pointer-events:auto;
+  transform:scale(1) translateY(0);
+}
+
+.card{
+  width:min(90vw,550px);
+  padding:35px 25px;
+  border-radius:28px;
+  background:rgba(80,5,30,.65);
+  border:2px solid rgba(255,180,205,.35);
+  box-shadow:0 0 30px rgba(255,30,100,.25);
+  backdrop-filter:blur(8px);
+  animation:cardIn .8s ease;
+}
+
+@keyframes cardIn{
+  from{
+    transform:scale(.8) rotate(-3deg);
+    opacity:0;
+  }
+  to{
+    transform:scale(1) rotate(0);
+    opacity:1;
+  }
+}
+
+.big{
+  font-size:70px;
+  margin-bottom:15px;
+  animation:bounce 1.4s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px) rotate(4deg)}
+}
+
+h1{
+  font-size:clamp(28px,8vw,48px);
+  margin-bottom:15px;
+  text-shadow:0 0 15px #ff477e;
+}
+
+h2{
+  font-size:clamp(22px,6vw,35px);
+  margin-bottom:15px;
+}
+
+p{
+  font-size:clamp(16px,4.5vw,21px);
+  line-height:1.6;
+  color:#ffe6ed;
+}
+
+button{
+  margin-top:25px;
+  border:none;
+  padding:14px 24px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ff477e,#b3134c);
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(255,30,100,.3);
+}
+
+button:active{
+  transform:scale(.94);
+}
+
+.gift{
+  font-size:90px;
+  animation:giftShake 1.5s infinite;
+}
+
+@keyframes giftShake{
+  0%,100%{transform:rotate(0)}
+  20%{transform:rotate(-6deg)}
+  40%{transform:rotate(6deg)}
+  60%{transform:rotate(-4deg)}
+  80%{transform:rotate(4deg)}
+}
+
+.count{
+  font-size:110px;
+  font-weight:bold;
+  text-shadow:0 0 30px #ff477e;
+  animation:countPop .8s ease;
+}
+
+@keyframes countPop{
+  0%{transform:scale(2);opacity:0}
+  60%{transform:scale(.9);opacity:1}
+  100%{transform:scale(1)}
+}
+
+.message-card{
+  width:min(92vw,650px);
+  min-height:300px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:35px 25px;
+}
+
+.message{
+  font-size:clamp(18px,5vw,25px);
+  line-height:1.75;
+  color:#fff1f5;
+  min-height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.cursor{
+  display:inline-block;
+  width:2px;
+  height:1.1em;
+  background:#fff;
+  margin-left:3px;
+  animation:blink .7s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0}
+}
+
+.controls{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  margin-top:20px;
+}
+
+.controls button{
+  flex:1;
+  margin-top:0;
+}
+
+.controls button:disabled{
+  opacity:.35;
+  cursor:not-allowed;
+}
+
+.back{
+  background:rgba(255,255,255,.12);
+}
+
+.final-heart{
+  font-size:75px;
+  animation:heartBeat 1s infinite;
+}
+
+@keyframes heartBeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+}
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  font-size:20px;
+  animation:confettiFall 3s linear forwards;
+  pointer-events:none;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+@media(max-width:500px){
+  .card{padding:28px 20px}
+  .big{font-size:60px}
+  .message-card{min-height:340px}
+  .message{min-height:200px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="web web1"></div>
+<div class="web web2"></div>
+
+<div class="float f1">🕷️</div>
+<div class="float f2">❤️</div>
+<div class="float f3">🕸️</div>
+<div class="float f4">💗</div>
+<div class="float f5">✨</div>
+
+<!-- LAGU KAMU -->
+<audio id="bgMusic" loop>
+  <source src="ssstik.io_1789651758796.mp3" type="audio/mpeg">
+</audio>
+
+<section class="slide active" id="slide1">
+  <div class="card">
+    <div class="big">🕷️</div>
+    <h1>DEOO...</h1>
+    <p>jangan pergi dulu 😭<br>ada sesuatu buat kamu...</p>
+    <button onclick="nextSlide(2)">APA INI? 🕷️</button>
+  </div>
+</section>
+
+<section class="slide" id="slide2">
+  <div class="card">
+    <div class="big">👀</div>
+    <h2>DEOO NEMU SESUATU...</h2>
+    <p>tapi kayaknya<br>harus dibuka dulu 😭</p>
+    <button onclick="nextSlide(3)">BUKA 👀</button>
+  </div>
+</section>
+
+<section class="slide" id="slide3">
+  <div class="card">
+    <div class="gift">🎁</div>
+    <h2>ADA APA DI DALAMNYA? 🤨</h2>
+    <p>klik kotaknya...</p>
+    <button onclick="nextSlide(4)">BUKA KALAU BERANI 😏</button>
+  </div>
+</section>
+
+<section class="slide" id="slide4">
+  <div class="card">
+    <div class="big">😭</div>
+    <h2>EH SABAR DEOO 😭</h2>
+    <p>jangan langsung kepo...<br>dikit lagi 👀🕷️</p>
+    <button onclick="startCountdown()">LANJUT 🕷️</button>
+  </div>
+</section>
+
+<section class="slide" id="countdownSlide">
+  <div class="card">
+    <div class="count" id="countNumber">3</div>
+  </div>
+</section>
+
+<section class="slide" id="birthdaySlide">
+  <div class="card">
+    <div class="big">🎂</div>
+    <h1>HAPPY BIRTHDAY DEOOO!! ❤️</h1>
+    <p>
+      akhirnya ketemu juga 😭💗<br>
+      ada beberapa pesan buat DEOO...
+    </p>
+    <button onclick="startMessages()">ADA PESAN BUAT DEOO 💌</button>
+  </div>
+</section>
+
+<section class="slide" id="messageSlide">
+  <div class="card message-card">
+    <h2>💌 BUAT DEOO</h2>
+
+    <div class="message" id="messageText"></div>
+
+    <div class="controls">
+      <button class="back" onclick="previousMessage()">← KEMBALI</button>
+      <button onclick="nextMessage()" id="nextBtn" disabled>LANJUT →</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="finalSlide">
+  <div class="card">
+    <div class="final-heart">🕷️❤️🕸️</div>
+    <h1>I LOVE YOU MORE THAN YESTERDAY! ❤️‍🔥</h1>
+    <p>HAPPY BIRTHDAY DEOOO!! 🥳🎂</p>
+  </div>
+</section>
+
+<script>
+
+function showSlide(id){
+  document.querySelectorAll(".slide").forEach(function(slide){
+    slide.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
+}
+
+function nextSlide(number){
+  showSlide("slide" + number);
+}
+
+
+/* COUNTDOWN */
+
+function startCountdown(){
+
+  showSlide("countdownSlide");
+
+  let number = 3;
+  const count = document.getElementById("countNumber");
+
+  count.textContent = number;
+
+  const timer = setInterval(function(){
+
+    number--;
+
+    if(number <= 0){
+
+      clearInterval(timer);
+      showSlide("birthdaySlide");
+
+    }else{
+
+      count.classList.remove("count");
+      void count.offsetWidth;
+      count.classList.add("count");
+      count.textContent = number;
+
+    }
+
+  },800);
+}
+
+
+/* TYPING SOUND */
+
+let audioContext = null;
+
+function createAudio(){
+
+  try{
+
+    if(!audioContext){
+
+      const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+      if(AudioContext){
+        audioContext = new AudioContext();
+      }
+
+    }
+
+    if(audioContext &&
+       audioContext.state === "suspended"){
+      audioContext.resume();
+    }
+
+  }catch(e){}
+
+}
+
+function typingSound(){
+
+  try{
+
+    createAudio();
+
+    if(!audioContext) return;
+
+    const now = audioContext.currentTime;
+
+    const oscillator =
+      audioContext.createOscillator();
+
+    const gain =
+      audioContext.createGain();
+
+    oscillator.type = "square";
+    oscillator.frequency.value =
+      180 + Math.random() * 60;
+
+    gain.gain.setValueAtTime(0.0001,now);
+
+    gain.gain.exponentialRampToValueAtTime(
+      0.055,now + 0.002
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+      0.0001,now + 0.035
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start(now);
+    oscillator.stop(now + 0.04);
+
+  }catch(e){}
+
+}
+
+
+/* MUSIC */
+
+function startMusic(){
+
+  const music =
+    document.getElementById("bgMusic");
+
+  music.volume = 0.35;
+
+  music.play().catch(function(){
+    console.log("Audio menunggu izin browser.");
+  });
+
+}
+
+function stopMusic(){
+
+  const music =
+    document.getElementById("bgMusic");
+
+  music.pause();
+  music.currentTime = 0;
+
+}
+
+
+/* PESAN */
+
+const messages = [
+
+  "Semoga di umur baru kamu ini semua firasat baik jadi kenyataan. ✨❤️",
+
+  "Sehat terus, happy terus! 🥹❤️",
+
+  "OIYA tetep jadi DEOO yang bikin aku salting itu yaa 😳",
+
+  "Kamu tau engga absen 3 ini tu setiap hari jatuh cinta sama kamu, lagi dan lagi. 💘",
+
+  "KAYAK AKU AJA BINGUNG LOH, KENAPA AKU ENGGA BOSEN GITU 😭",
+
+  "Dimana-mana pasti yang aku tunggu tu keberadaan kamu muncul. 💘",
+
+  "MAKASII YAA DEOO ❤️"
+
+];
+
+let messageIndex = 0;
+let typingTimer = null;
+let typingFinished = false;
+
+
+function startMessages(){
+
+  createAudio();
+  startMusic();
+
+  messageIndex = 0;
+
+  showSlide("messageSlide");
+  showMessage();
+
+}
+
+
+function showMessage(){
+
+  clearInterval(typingTimer);
+
+  const messageBox =
+    document.getElementById("messageText");
+
+  const nextBtn =
+    document.getElementById("nextBtn");
+
+  const text =
+    messages[messageIndex];
+
+  messageBox.innerHTML = "";
+  nextBtn.disabled = true;
+  typingFinished = false;
+
+  let index = 0;
+
+  typingTimer = setInterval(function(){
+
+    if(index >= text.length){
+
+      clearInterval(typingTimer);
+
+      typingFinished = true;
+      nextBtn.disabled = false;
+
+      return;
+    }
+
+    const character = text[index];
+
+    messageBox.innerHTML =
+      text.substring(0,index + 1) +
+      '<span class="cursor"></span>';
+
+    if(character !== " "){
+      typingSound();
+    }
+
+    index++;
+
+  },45);
+
+}
+
+
+function nextMessage(){
+
+  if(!typingFinished) return;
+
+  messageIndex++;
+
+  if(messageIndex >= messages.length){
+
+    showSlide("finalSlide");
+    createConfetti();
+
+    return;
+  }
+
+  showMessage();
+
+}
+
+
+function previousMessage(){
+
+  clearInterval(typingTimer);
+
+  if(messageIndex <= 0){
+
+    stopMusic();
+    showSlide("birthdaySlide");
+
+    return;
+  }
+
+  messageIndex--;
+  showMessage();
+
+}
+
+
+/* CONFETTI */
+
+function createConfetti(){
+
+  const symbols = [
+    "❤️","💗","✨","🕷️","🕸️","💖","🎉"
+  ];
+
+  for(let i=0;i<45;i++){
+
+    const confetti =
+      document.createElement("div");
+
+    confetti.className = "confetti";
+
+    confetti.textContent =
+      symbols[
+        Math.floor(Math.random()*symbols.length)
+      ];
+
+    confetti.style.left =
+      Math.random()*100 + "vw";
+
+    confetti.style.animationDuration =
+      (2 + Math.random()*3) + "s";
+
+    confetti.style.animationDelay =
+      Math.random()*1.5 + "s";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(function(){
+      confetti.remove();
+    },5000);
+
+  }
+
+}
+
+</script>
+
+</body>
+  </html>
